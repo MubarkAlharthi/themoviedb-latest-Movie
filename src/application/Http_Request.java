@@ -271,22 +271,6 @@ public class Http_Request {
     	
     	
     } 
-//
-//	public static void main(String[] args) {
-//		// TODO Auto-generated method stub
-//
-//		try {
-//			
-//			Http_Request http_Request= new Http_Request();
-//        	System.out.println("the size is "+http_Request.extract_latest_Movie_FromJson().size());
-//
-//		}catch (Exception e) {
-//			// TODO: handle exception
-//			
-//			System.out.println("Io exception ");
-//		}
-//		
-//	
-//	}
+
 
 }

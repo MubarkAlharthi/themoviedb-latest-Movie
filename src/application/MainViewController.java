@@ -172,7 +172,6 @@ public class MainViewController  implements Initializable {
 
 	    @FXML
 	    void Latest_Movie_Action(ActionEvent event) {
-	    	logo.setVisible(false);
 	    	work_pane.setVisible(true);
 	    	movielist.setVisible(true);
 			Favorite_And_Details.setVisible(true);
@@ -220,7 +219,6 @@ public class MainViewController  implements Initializable {
 
 	    @FXML
 	    void getDetails(MouseEvent event) {
-	    	System.out.println("is cliced");
 	    	   ObservableList<MovieInfo> selectedIndices = movielist.getSelectionModel().getSelectedItems();
            	
 	            for(MovieInfo m :selectedIndices) {
