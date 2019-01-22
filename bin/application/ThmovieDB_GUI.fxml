@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1001.0" prefWidth="1244.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainViewController">
+   <children>
+      <SplitPane dividerPositions="0.19054652880354506" layoutX="51.0" layoutY="87.0" prefHeight="426.0" prefWidth="625.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane fx:id="MovieDetails" minHeight="0.0" minWidth="0.0" prefHeight="718.0" prefWidth="185.0" style="-fx-background-color: #4786c1#4786c1 #4786c1;">
+               <opaqueInsets>
+                  <Insets left="1.0" />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <children>
+                  <Button fx:id="Delete_from_My_Favorites" layoutX="-5.0" layoutY="485.0" mnemonicParsing="false" onAction="#Delete_My_Favorites" prefHeight="27.0" prefWidth="177.0" style="-fx-background-color: #4786c1#4786c1#4786c1;" text="Delete " textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="Show_Search_Pane_Button" layoutX="47.0" layoutY="140.0" mnemonicParsing="false" onAction="#Show_Search_Pane" style="-fx-background-color: #4786c1#4786c#4786c1;" text="Search" textFill="WHITE">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="Show_Latest_Movie_Button" layoutX="31.0" layoutY="90.0" mnemonicParsing="false" onAction="#Latest_Movie_Action" style="-fx-background-color: #4786c1#4786c1#4786c1;" text="LatestMovie" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="Add_To_My_Favorites" layoutX="16.0" layoutY="436.0" mnemonicParsing="false" onAction="#Add_My_Favorites" prefHeight="27.0" prefWidth="129.0" style="-fx-background-color: #4786c1#4786c1#4786c1;" text="Add" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+          <AnchorPane fx:id="work_pane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <SplitPane dividerPositions="0.4152457372116349" layoutX="98.0" layoutY="88.0" orientation="VERTICAL" prefHeight="424.0" prefWidth="433.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <ListView fx:id="movielist" layoutY="30.0" onMousePressed="#getDetails" orientation="HORIZONTAL" prefHeight="306.0" prefWidth="666.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0" />
+                              <Text fx:id="Latest_Movie_Lable" layoutX="214.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Latest Movie" textAlignment="CENTER" />
+                              <AnchorPane fx:id="Search_Pane" layoutY="-31.0" prefHeight="487.0" prefWidth="1021.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <TextField fx:id="Name_text_Field" layoutX="85.0" layoutY="140.0" />
+                                    <Text layoutX="14.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+                                    <Text layoutX="95.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search about Movie" />
+                                    <Button fx:id="Search_Api" layoutX="139.0" layoutY="190.0" mnemonicParsing="false" onAction="#Search_in_API" text="Search ">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <AnchorPane fx:id="Datails2" layoutX="261.0" minHeight="0.0" minWidth="0.0" prefHeight="359.0" prefWidth="391.0">
+                                       <children>
+                                          <Text fx:id="MovieDetailsLable2" layoutX="92.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Movie Details:" />
+                                          <AnchorPane layoutY="28.0" prefHeight="306.0" prefWidth="328.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                             <children>
+                                                <Text fx:id="Title2" layoutX="42.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title" />
+                                                <Text fx:id="overview2" layoutX="92.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Overview:" />
+                                                <Text fx:id="type2" layoutX="175.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Types" />
+                                                <ImageView fx:id="imageView2" fitHeight="159.0" fitWidth="93.0" layoutX="5.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true" />
+                                                <TextArea fx:id="textArea2" layoutX="109.0" layoutY="39.0" prefHeight="159.0" prefWidth="208.0" wrapText="true" AnchorPane.bottomAnchor="108.0" AnchorPane.leftAnchor="109.0" AnchorPane.rightAnchor="11.0" />
+                                                <Text layoutX="5.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title:" wrappingWidth="37.451171875" />
+                                                <Text layoutX="123.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Types:" />
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane maxHeight="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="160.0">
+                           <children>
+                              <SplitPane fx:id="Favorite_And_Details" dividerPositions="0.5" layoutX="123.0" layoutY="24.0" prefHeight="207.0" prefWidth="431.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="424.0" prefWidth="495.0">
+                                       <children>
+                                          <Text fx:id="MyFavoritesLable" layoutX="67.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Favorites:" />
+                                          <ListView fx:id="favorites_movies" layoutX="8.0" layoutY="34.0" maxHeight="-Infinity" onMousePressed="#getDetails3" prefHeight="400.0" prefWidth="495.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane fx:id="MovieD2" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <Text fx:id="MovieDetailsLable" layoutX="92.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Movie Details:" />
+                                          <AnchorPane layoutY="28.0" prefHeight="460.0" prefWidth="494.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                             <children>
+                                                <Text fx:id="overview" layoutX="110.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Overview:" />
+                                                <Text fx:id="Title" layoutX="53.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title" />
+                                                <Text fx:id="type" layoutX="277.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Types" />
+                                                <ImageView fx:id="imageView" fitHeight="159.0" fitWidth="93.0" layoutX="10.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true" />
+                                                <TextArea fx:id="textArea" layoutX="110.0" layoutY="94.0" prefHeight="159.0" prefWidth="208.0" wrapText="true" AnchorPane.bottomAnchor="207.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="10.0" />
+                                                <Text layoutX="13.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title:" />
+                                                <Text layoutX="199.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Types:" />
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                              <ListView fx:id="movielist1" layoutX="10.0" layoutY="28.0" onMousePressed="#getDetails2" orientation="HORIZONTAL" prefHeight="227.0" prefWidth="999.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
