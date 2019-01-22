@@ -7,6 +7,7 @@
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
@@ -15,36 +16,48 @@
    <children>
       <SplitPane dividerPositions="0.19054652880354506" layoutX="51.0" layoutY="87.0" prefHeight="426.0" prefWidth="625.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
-          <AnchorPane fx:id="MovieDetails" minHeight="0.0" minWidth="0.0" prefHeight="718.0" prefWidth="185.0" style="-fx-background-color: #4786c1#4786c1 #4786c1;">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="718.0" prefWidth="185.0" style="-fx-background-color: #4786c1;">
                <opaqueInsets>
-                  <Insets left="1.0" />
+                  <Insets right="1.0" />
                </opaqueInsets>
                <cursor>
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
                <children>
-                  <Button fx:id="Delete_from_My_Favorites" layoutX="-5.0" layoutY="485.0" mnemonicParsing="false" onAction="#Delete_My_Favorites" prefHeight="27.0" prefWidth="177.0" style="-fx-background-color: #4786c1#4786c1#4786c1;" text="Delete " textFill="WHITE">
+                  <Button fx:id="Delete_from_My_Favorites" layoutX="39.0" layoutY="486.0" mnemonicParsing="false" onAction="#Delete_My_Favorites" prefHeight="27.0" prefWidth="177.0" style="-fx-background-color: #4786c1;" text="Delete to Favorite" textFill="WHITE">
                      <cursor>
                         <Cursor fx:constant="OPEN_HAND" />
                      </cursor>
+                     <effect>
+                        <Glow />
+                     </effect>
                   </Button>
-                  <Button fx:id="Show_Search_Pane_Button" layoutX="47.0" layoutY="140.0" mnemonicParsing="false" onAction="#Show_Search_Pane" style="-fx-background-color: #4786c1#4786c#4786c1;" text="Search" textFill="WHITE">
+                  <Button fx:id="Show_Search_Pane_Button" layoutX="38.0" layoutY="181.0" mnemonicParsing="false" onAction="#Show_Search_Pane" prefHeight="27.0" prefWidth="177.0" style="-fx-background-color: #4786c1;" text="Search" textFill="WHITE">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
                      <cursor>
                         <Cursor fx:constant="OPEN_HAND" />
                      </cursor>
+                     <effect>
+                        <Glow />
+                     </effect>
                   </Button>
-                  <Button fx:id="Show_Latest_Movie_Button" layoutX="31.0" layoutY="90.0" mnemonicParsing="false" onAction="#Latest_Movie_Action" style="-fx-background-color: #4786c1#4786c1#4786c1;" text="LatestMovie" textFill="WHITE">
+                  <Button fx:id="Show_Latest_Movie_Button" layoutX="39.0" layoutY="125.0" mnemonicParsing="false" onAction="#Latest_Movie_Action" prefHeight="27.0" prefWidth="177.0" style="-fx-background-color: #4786c1;" text="LatestMovie" textFill="WHITE">
                      <cursor>
                         <Cursor fx:constant="OPEN_HAND" />
                      </cursor>
+                     <effect>
+                        <Glow />
+                     </effect>
                   </Button>
-                  <Button fx:id="Add_To_My_Favorites" layoutX="16.0" layoutY="436.0" mnemonicParsing="false" onAction="#Add_My_Favorites" prefHeight="27.0" prefWidth="129.0" style="-fx-background-color: #4786c1#4786c1#4786c1;" text="Add" textFill="WHITE">
+                  <Button fx:id="Add_To_My_Favorites" layoutX="39.0" layoutY="420.0" mnemonicParsing="false" onAction="#Add_My_Favorites" prefHeight="27.0" prefWidth="177.0" style="-fx-background-color: #4786c1;" text="Add to Favorite" textFill="WHITE">
                      <cursor>
                         <Cursor fx:constant="OPEN_HAND" />
                      </cursor>
+                     <effect>
+                        <Glow />
+                     </effect>
                   </Button>
                </children>
             </AnchorPane>
@@ -114,7 +127,7 @@
                                     </AnchorPane>
                                 </items>
                               </SplitPane>
-                              <ListView fx:id="movielist1" layoutX="10.0" layoutY="28.0" onMousePressed="#getDetails2" orientation="HORIZONTAL" prefHeight="227.0" prefWidth="999.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <ListView fx:id="movielist1" layoutX="10.0" layoutY="28.0" onMousePressed="#getDetails2" orientation="HORIZONTAL" prefHeight="329.0" prefWidth="999.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                            </children>
                         </AnchorPane>
                     </items>

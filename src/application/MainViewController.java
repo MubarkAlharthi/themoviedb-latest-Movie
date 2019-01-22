@@ -30,9 +30,15 @@ public class MainViewController  implements Initializable {
 	
 		private List<MovieInfo> movies;
 		private Http_Request http_Request= new Http_Request();
+		
 
-	 @FXML
+
+	    @FXML
 	    private AnchorPane MovieDetails;
+
+	    @FXML
+	    private ImageView logo;
+	 
 	 
 	   @FXML
 	    private AnchorPane MovieD2;
@@ -166,6 +172,7 @@ public class MainViewController  implements Initializable {
 
 	    @FXML
 	    void Latest_Movie_Action(ActionEvent event) {
+	    	logo.setVisible(false);
 	    	work_pane.setVisible(true);
 	    	movielist.setVisible(true);
 			Favorite_And_Details.setVisible(true);
@@ -243,7 +250,6 @@ public class MainViewController  implements Initializable {
 	    // this method when Mouse pressed on Button Search is clicked 
 	    @FXML
 	    void getDetails2(MouseEvent event) {
-	    	System.out.println("is cliced");
 	    	Datails2.setVisible(true);
 
 	    	   ObservableList<MovieInfo> selectedIndices = movielist1.getSelectionModel().getSelectedItems();
@@ -275,7 +281,6 @@ public class MainViewController  implements Initializable {
 
 	    @FXML
 	    void getDetails3(MouseEvent event) {
-	    	System.out.println("is cliced2");
 	    	Datails2.setVisible(true);
 
 	    	   ObservableList<MovieInfo> selectedIndices = favorites_movies.getSelectionModel().getSelectedItems();
@@ -314,9 +319,8 @@ public class MainViewController  implements Initializable {
     	movielist.setVisible(false);
 		movielist1.setVisible(false);
 		favorites_movies.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-
-    	
-
+//		logo.setImage(new Image("https://www.themoviedb.org/assets/1/v4/logos/powered-by-rectangle-green-dcada16968ed648d5eb3b36bbcfdd8cdf804f723dcca775c8f2bf4cea025aad6.svg"));
+//		logo.setVisible(true);
 	}
     
     private void prepareMyList(){
